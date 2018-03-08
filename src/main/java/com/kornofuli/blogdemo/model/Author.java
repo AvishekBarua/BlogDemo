@@ -1,6 +1,6 @@
 package com.kornofuli.blogdemo.model;
 
-
+//dev branch created on git
 import java.util.Set;
 
 import javax.persistence.CascadeType;
@@ -35,14 +35,11 @@ public class Author {
 	public Author() {
 	}
 
-	
 	public Author(String firstName, String lastName, String password) {
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.password = password;
 	}
-
-
 
 	public String getFirstName() {
 		return firstName;
