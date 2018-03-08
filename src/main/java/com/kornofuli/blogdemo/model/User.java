@@ -21,14 +21,14 @@ public class User {
 	
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
-	//@Column(name = "author_id")
+	@Column(name = "user_id")
 	private Long id;
 	private String firstName;
 	private String lastName;
 	private String password;
 
 	
-	@OneToMany(mappedBy="author", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+	@OneToMany(mappedBy="user", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
 	@JsonManagedReference
 	private Set<Post> posts; 
 	
