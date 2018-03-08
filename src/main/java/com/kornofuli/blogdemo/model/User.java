@@ -16,8 +16,8 @@ import javax.persistence.Table;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 @Entity
-@Table(name="author")
-public class Author {
+@Table(name="user")
+public class User {
 	
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
@@ -32,10 +32,10 @@ public class Author {
 	@JsonManagedReference
 	private Set<Post> posts; 
 	
-	public Author() {
+	public User() {
 	}
 
-	public Author(String firstName, String lastName, String password) {
+	public User(String firstName, String lastName, String password) {
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.password = password;
